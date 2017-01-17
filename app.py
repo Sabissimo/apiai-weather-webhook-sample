@@ -51,7 +51,7 @@ def makeYqlQuery(req):
         return None
 		
 	if tempunit is None:
-		tempunit = "f";
+		tempunit = "f"
 
     return "select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "') and u='" + tempunit + "'"
 
